@@ -1,0 +1,2 @@
+pack: tar -czf - [file_list] | openssl enc -e -aes256 -out data.tar.gz
+unpack: openssl enc -d -aes256 -in data.tar.gz | tar xz -C [target_loc]
